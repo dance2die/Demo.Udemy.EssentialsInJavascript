@@ -1,16 +1,21 @@
-class Entity {
+import Entity from "./entity";
+
+class Hobbit extends Entity {
     constructor(name, height) {
-        this.name = name;
-        this.height = height;
+        super(name, height);
     }
 
     greet() {
-        console.log(`Hi I'm ${this.name} from middle earth`);
+        console.log(`Hello! I'm ${this.name} from the Shire!`);
     }
 }
 
-let merry = new Entity("Merry", 4.6);
-merry.greet();
+let frodo = new Hobbit("Frodo Baggins", 4.5);
+frodo.greet();
+
+
+// let merry = new Entity("Merry", 4.6);
+// merry.greet();
 
 
 // import {students} from "./students";
